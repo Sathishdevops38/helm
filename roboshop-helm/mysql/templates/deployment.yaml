@@ -26,6 +26,7 @@ spec:
             port:  3306 
           initialDelaySeconds: 60
           periodSeconds: 10
+          timeoutSeconds: 5
         livenessProbe:
           tcpSocket:
             port:  3306
