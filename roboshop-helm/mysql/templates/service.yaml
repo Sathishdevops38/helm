@@ -23,7 +23,7 @@ metadata:
   name: mysql
   namespace: roboshop
 spec:
-  type: {{ .Values.serive.type }}
+  type: {{ .Values.service.type }}
   selector:
     project: roboshop
     component: mysql
