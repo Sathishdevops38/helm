@@ -1,5 +1,0 @@
-apiVersion: v2
-name: payment
-version: 1.0.0
-description: payment helm chart installation for roboshopss 
-appVersion: v1
