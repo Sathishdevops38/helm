@@ -26,7 +26,8 @@ spec:
         image: "{{ .Values.deployment.imageRepo }}:{{ .Values.deployment.imageTag }}"
         envFrom:
         - configMapRef:
-            name: cart   
+            name: cart
+      imagePullPolicy: Always        
       resources:
         requests:
           cpu: 100m
@@ -49,5 +50,5 @@ spec:
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
-      imagePullPolicy: Always    
+          
         
