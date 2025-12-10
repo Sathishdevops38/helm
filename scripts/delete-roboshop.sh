@@ -1,0 +1,1 @@
+for i in sc mongodb redis mysql rabbitmq catalogue user cart shipping payment frontend;do cd $i; helm uninstall $i .;cd ..;done
