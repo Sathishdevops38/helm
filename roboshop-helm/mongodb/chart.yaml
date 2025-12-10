@@ -1,5 +1,0 @@
-apiVersion: v2
-name: mongodb
-version: 1.0.0
-description: mongodb helm chart installation for roboshop 
-appVersion: v1 
