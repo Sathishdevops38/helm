@@ -27,7 +27,7 @@ spec:
         envFrom:
         - configMapRef:
             name: cart
-      imagePullPolicy: Always        
+        imagePullPolicy: Always        
       resources:
         requests:
           cpu: 100m
