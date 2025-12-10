@@ -28,7 +28,7 @@ spec:
         - configMapRef:
             name: cart
         imagePullPolicy: Always 
-          ports:
+        ports:
         - name: liveness-port
           containerPort: 8080
         readinessProbe:
