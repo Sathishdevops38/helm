@@ -1,0 +1,12 @@
+deployment:
+  component: mongodb
+  namespace: roboshop
+  replicas: 1
+  imageRepo: sathishdevops38/mongodb
+  imageTag: v1
+  labels:
+    project: roboshop
+    tier: db
+service:
+  type: ClusterIP
+

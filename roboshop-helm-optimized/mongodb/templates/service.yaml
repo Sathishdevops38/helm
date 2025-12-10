@@ -1,0 +1,35 @@
+# headless service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-headless
+  labels:
+    project: {{ .Values.deployment.labels.project }}
+    component: {{ .Values.deployment.component }}
+    tier: {{ .Values.deployment.labels.tier }}
+spec:
+  clusterIP: None
+  selector:
+    project: {{ .Values.deployment.labels.project }}
+    component: {{ .Values.deployment.component }}
+    tier: {{ .Values.deployment.labels.tier }}
+  ports:
+  - port: 27017 #service port
+    targetPort: 27017 # container port
+    protocol: TCP  
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.deployment.component }}
+  namespace: {{ .Values.deployment.namespace }}
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    project: {{ .Values.deployment.labels.project }}
+    component: {{ .Values.deployment.component }}
+    tier: {{ .Values.deployment.labels.tier }}
+  ports:
+    - protocol: TCP
+      port: 27017 #serive port
+      targetPort: 27017 #container port
