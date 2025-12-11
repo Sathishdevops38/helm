@@ -9,7 +9,7 @@ spec:
       project: {{ .Values.deployment.labels.project }}
       component: {{ .Values.deployment.component }}
       tier: {{ .Values.deployment.labels.tier }} # has to match .spec.template.metadata.labels
-  serviceName: "mongodb-headless" # this should be head less service name
+  serviceName: "{{ .Values.deployment.component }}-headless" # this should be head less service name
   replicas: {{ .Values.deployment.replicas }} # by default is 1
   template:
     metadata:
