@@ -1,8 +1,8 @@
 #!/bin/bash
 
 CLUSTER_NAME="roboshop-eks-cluster"
-NODEGROUP_STACK="eksctl-roboshop-eks-cluster-nodegroup-roboshop-dev-ng"
-CLUSTER_STACK="eksctl-roboshop-eks-cluster-cluster"
+NODEGROUP_STACK="eksctl-roboshop-dev-nodegroup-roboshop-dev-ng"
+CLUSTER_STACK="eksctl-roboshop-dev-cluster"
 
 echo "Starting decommission process for EKS cluster: $CLUSTER_NAME"
 echo "---------------------------------------------------------"
