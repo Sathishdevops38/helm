@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CLUSTER_NAME="roboshop-eks-cluster"
+CLUSTER_NAME="roboshop-dev"
 NODEGROUP_STACK="eksctl-roboshop-dev-nodegroup-roboshop-dev-ng"
 CLUSTER_STACK="eksctl-roboshop-dev-cluster"
 
